@@ -36,6 +36,15 @@ namespace ModLoaderExceptionCatcher
             Debug.Log("[MADLAD]: Found "+errors.Count()+" exceptions");
             File.Delete(newPath);
             if (errors.Count == 0) return;
+            string pathToWrite = KSPUtil.ApplicationRootPath + "/GameData/MADLAD/Logs/log.txt";
+            
+            using (StreamWriter writer = new StreamWriter(pathToWrite))
+            {
+                foreach (string s in errors)
+                {
+                    writer.WriteLine(s);
+                }
+            }
             uiDialog = GenerateDialog();
             // the code that you want to measure comes here
             watch.Stop();
