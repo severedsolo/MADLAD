@@ -6,11 +6,12 @@ using UnityEngine;
 namespace MADLAD
 {
     [KSPAddon(KSPAddon.Startup.MainMenu, true)]
-    public class ModLoaderExceptionCatcher : MonoBehaviour
+    public class ModLoaderExceptionCatcherMainMenu : MonoBehaviour
     {
         readonly List<string> _errors = new List<string>();
         PopupDialog _uiDialog;
         private readonly Rect _geometry = new Rect(0.5f,0.5f,600,10);
+        
         
         private void Start()
         {
@@ -34,17 +35,11 @@ namespace MADLAD
         Debug.Log("[MADLAD]: Found "+_errors.Count()+" exceptions");
             File.Delete(newPath);
             if (_errors.Count == 0) return;
-            string pathToWrite = KSPUtil.ApplicationRootPath + "/GameData/MADLAD/Logs/log.txt";
-            
-            using (StreamWriter writer = new StreamWriter(pathToWrite))
-            {
-                foreach (string s in _errors)
-                {
-                    writer.WriteLine(s);
-                }
-            }
             _uiDialog = GenerateDialog();
-            // the code that you want to measure comes here
+            foreach (string s in _errors)
+            {
+                LogWriter.Instance.WriteLog(s);
+            }
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;
             Debug.Log("[MADLAD]: Function executed in "+elapsedMs+" ms");

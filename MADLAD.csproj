@@ -50,7 +50,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModLoaderExceptionCatcher.cs" />
+    <Compile Include="LogWriter.cs" />
+    <Compile Include="ModLoaderExceptionCatcherMainMenu.cs" />
+    <Compile Include="ModLoadExceptionCatcherOtherScenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
