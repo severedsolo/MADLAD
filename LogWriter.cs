@@ -17,6 +17,7 @@ namespace MADLAD
             DontDestroyOnLoad(this);
             Instance = this;
             pathToWrite = KSPUtil.ApplicationRootPath + "/GameData/MADLAD/Logs/log.txt";
+            Directory.CreateDirectory(Path.GetDirectoryName(pathToWrite));
             Debug.Log("[MADLAD]: LogWriter.Awake");
         }
 
