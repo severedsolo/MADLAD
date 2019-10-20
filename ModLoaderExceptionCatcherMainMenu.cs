@@ -11,28 +11,36 @@ namespace MADLAD
         readonly List<string> _errors = new List<string>();
         PopupDialog _uiDialog;
         private readonly Rect _geometry = new Rect(0.5f,0.5f,600,10);
-        
-        
+
+
         private void Start()
         {
-        var watch = System.Diagnostics.Stopwatch.StartNew();
-        string path = KSPUtil.ApplicationRootPath + "KSP.log";
-        string newPath = path + "_backup";
-        File.Copy(path, newPath);
-        using (StreamReader reader = new StreamReader(newPath))
-        {
-            string line = "None";
-            while ((line = reader.ReadLine()) != null)
-            {
-                if (line.Contains("Exception loading"))
-                {
-                    _errors.Add(line);
-                    Debug.Log("[MADLAD]: Found an error at " + line);
-                }
-            }
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            CheckLogForErrors();
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
+            Debug.Log("[MADLAD]: Function executed in " + elapsedMs + " ms");
         }
 
-        Debug.Log("[MADLAD]: Found "+_errors.Count()+" exceptions");
+        private void CheckLogForErrors()
+        {
+            string path = KSPUtil.ApplicationRootPath + "KSP.log";
+            string newPath = path + "_backup";
+            File.Copy(path, newPath);
+            using (StreamReader reader = new StreamReader(newPath))
+            {
+                string line = "None";
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (line.Contains("Exception loading"))
+                    {
+                        _errors.Add(line);
+                        Debug.Log("[MADLAD]: Found an error at " + line);
+                    }
+                }
+            }
+
+            Debug.Log("[MADLAD]: Found " + _errors.Count + " exceptions");
             File.Delete(newPath);
             if (_errors.Count == 0) return;
             _uiDialog = GenerateDialog();
@@ -40,9 +48,6 @@ namespace MADLAD
             {
                 LogWriter.Instance.WriteLog(s);
             }
-            watch.Stop();
-            var elapsedMs = watch.ElapsedMilliseconds;
-            Debug.Log("[MADLAD]: Function executed in "+elapsedMs+" ms");
         }
 
         private PopupDialog GenerateDialog()
