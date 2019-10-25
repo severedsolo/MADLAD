@@ -1,12 +1,8 @@
-﻿
-#region Using Directives
-
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
-
-#endregion
 
 namespace InstallValidator
 {
@@ -141,7 +137,7 @@ namespace InstallValidator
                 gameObject.AddComponent<IssueGui>();
             }
             watch.Stop();
-            Debug.Log("[MADLAD]: Parsed .version files in "+watch.ElapsedMilliseconds+"ms");
+            UnityEngine.Debug.Log("[MADLAD]: Parsed .version files in "+watch.ElapsedMilliseconds+"ms");
         }
     }
 }
