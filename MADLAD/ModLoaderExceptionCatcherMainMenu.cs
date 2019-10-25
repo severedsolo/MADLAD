@@ -19,7 +19,7 @@ namespace MADLAD
             CheckLogForErrors();
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;
-            Debug.Log("[MADLAD]: Function executed in " + elapsedMs + " ms");
+            Debug.Log("[MADLAD]: Parsed Log in " + elapsedMs + " ms");
         }
 
         private void CheckLogForErrors()

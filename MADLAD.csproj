@@ -48,11 +48,22 @@
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\.steam\steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\Documents\GitHub\KSP_Install_Validator\InstallValidator\bin\Release\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\Documents\GitHub\KSP_Install_Validator\InstallValidator\bin\Release\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogWriter.cs" />
-    <Compile Include="ModLoaderExceptionCatcherMainMenu.cs" />
-    <Compile Include="ModLoadExceptionCatcherOtherScenes.cs" />
+    <Compile Include="InstallValidator\InstallLocInfo.cs" />
+    <Compile Include="InstallValidator\IssueGui.cs" />
+    <Compile Include="InstallValidator\Json.cs" />
+    <Compile Include="InstallValidator\Log.cs" />
+    <Compile Include="InstallValidator\Process.cs" />
+    <Compile Include="MADLAD\LogWriter.cs" />
+    <Compile Include="MADLAD\ModLoaderExceptionCatcherMainMenu.cs" />
+    <Compile Include="MADLAD\ModLoadExceptionCatcherOtherScenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
