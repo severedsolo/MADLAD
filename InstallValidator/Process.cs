@@ -81,6 +81,8 @@ namespace InstallValidator
                 Log.Error("Missing directory: " + ili.Directory);
                 return;
             }
+            if (!ili.FileSpecified)
+                return;
             if (String.IsNullOrEmpty(ili.FileName)) ili.FileName = ili.Name + ".version";
             fullPath += "/" + ili.FileName;           
             fullPath.Replace("//", "/");

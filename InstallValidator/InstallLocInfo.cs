@@ -14,6 +14,7 @@ namespace InstallValidator
         public string Directory = null;
         public string Path = null;
         public string Message = null;
+        public bool FileSpecified = false;
 
         /// <summary>
         /// Instantiator
@@ -51,6 +52,7 @@ namespace InstallValidator
                     case "FILE":
                         this.FileName = (string)data[key];
                         Log.Info("FILE: " + FileName);
+                        FileSpecified = true;
                         break;
 
                     case "DIRECTORY":
