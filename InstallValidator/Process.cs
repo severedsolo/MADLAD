@@ -61,7 +61,10 @@ namespace InstallValidator
         /// <param name="ili"></param>
         void ValidateInstallLoc(string stanza, InstallLocInfo ili)
         {
-            string fullPath = "GameData" + ili.Path;
+            // Use the rootPath to protect against any strange instance where the current directory has been changed
+            var rootPath = KSPUtil.ApplicationRootPath.Replace('\\', '/');
+            // rootPath already has a trailing slash
+            string fullPath = rootPath + "GameData/" + ili.Path;
              if (ili.Path != null && !Directory.Exists(fullPath))
             {
                 ParseError = true;
