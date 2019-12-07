@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1696fe-1543-4fc7-84d0-2e6e1a2c5f42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MADLAD/MADLAD/ModLoadExceptionCatcherOtherScenes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MADLAD/MADLAD/ModLoadExceptionCatcherOtherScenes.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MADLAD/MADLAD/ModLoaderExceptionCatcherMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MADLAD/MADLAD/ModLoaderExceptionCatcherMainMenu.cs" afterDir="false" />
     </list>
@@ -19,6 +21,7 @@
     <setting file="file://$PROJECT_DIR$/MADLAD/MADLAD/LogWriter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MADLAD/MADLAD/ModLoaderExceptionCatcherMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MADLAD/MADLAD/ModLoadExceptionCatcherOtherScenes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MADLAD/InstallValidator/Process.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MADLAD/InstallValidator/InstallLocInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -83,7 +86,8 @@
       <updated>1575716747599</updated>
       <workItem from="1575716750869" duration="7000" />
       <workItem from="1575716817486" duration="89000" />
-      <workItem from="1575716923018" duration="9042000" />
+      <workItem from="1575716923018" duration="9456000" />
+      <workItem from="1575729342530" duration="395000" />
     </task>
     <servers />
   </component>

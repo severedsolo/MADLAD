@@ -67,7 +67,9 @@ namespace MADLAD
                 if (!line.Contains(modName)) continue;
                 Debug.Log("[MADLAD]: Found potential whitelist entry for "+modName);
                 if(File.Exists(Path.Combine(KSPUtil.ApplicationRootPath, "GameData/", path))) continue;
-                Debug.Log("[MADLAD]: Matched "+modName+" to the whitelist. Suppressing error");
+                string log = "Matched " + modName + " to the whitelist. Suppressing error";
+                Debug.Log("[MADLAD]: "+log);
+                LogWriter.Instance.WriteLog(log);
                 return true;
             }
             Debug.Log("[MADLAD]: Could not verify that error is expected. Logging");
