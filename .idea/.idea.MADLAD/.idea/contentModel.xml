@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_MADLAD.2098076545.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="MADLAD" t="IncludeRecursive">
+        <e p="InstallValidator" t="Include">
+          <e p="InstallLocInfo.cs" t="Include" />
+          <e p="IssueGui.cs" t="Include" />
+          <e p="Json.cs" t="Include" />
+          <e p="Log.cs" t="Include" />
+          <e p="Process.cs" t="Include" />
+        </e>
+        <e p="MADLAD" t="Include">
+          <e p="LogWriter.cs" t="Include" />
+          <e p="ModLoadExceptionCatcherOtherScenes.cs" t="Include" />
+          <e p="ModLoaderExceptionCatcherMainMenu.cs" t="Include" />
+        </e>
+        <e p="MADLAD.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+      </e>
+      <e p="MADLAD.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
