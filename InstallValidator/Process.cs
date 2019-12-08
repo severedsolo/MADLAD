@@ -64,25 +64,36 @@ namespace InstallValidator
             // Use the rootPath to protect against any strange instance where the current directory has been changed
             var rootPath = KSPUtil.ApplicationRootPath.Replace('\\', '/');
             // rootPath already has a trailing slash
-            string fullPath = rootPath + "GameData/" + ili.Path;
-             if (ili.Path != null && !Directory.Exists(fullPath))
-            {
-                ParseError = true;
-                AddParseErrorMsg = ProcessMessage("Path", ili, stanza, DefaultMsg);
+            string fullPath = rootPath + "GameData/";
 
-                Log.Error("Missing path: " + ili.Path);
-                return;
+            if (ili.Path != null)
+            {
+                fullPath += ili.Path;
+                fullPath.Replace("//", "/");
+                if (!Directory.Exists(fullPath))
+                {
+                    ParseError = true;
+                    AddParseErrorMsg = ProcessMessage("Path", ili, stanza, DefaultMsg);
+
+                    Log.Error("Missing path: " + ili.Path);
+                    Log.Error("Missing fullPath: " + fullPath);
+                    return;
+                }
             }
-            fullPath += "/" + ili.Directory;
-            fullPath.Replace("//", "/");
-
-            if (ili.Directory != null && !Directory.Exists(fullPath))
+            if (ili.Directory != null)
             {
-                ParseError = true;
-                AddParseErrorMsg = ProcessMessage("Directory", ili, stanza, DefaultMsg);
+                fullPath += "/" + ili.Directory;
+                fullPath.Replace("//", "/");
 
-                Log.Error("Missing directory: " + ili.Directory);
-                return;
+                if (!Directory.Exists(fullPath))
+                {
+                    ParseError = true;
+                    AddParseErrorMsg = ProcessMessage("Directory", ili, stanza, DefaultMsg);
+
+                    Log.Error("Missing directory: " + ili.Directory);
+                    Log.Error("Missing fullPath: " + fullPath);
+                    return;
+                }
             }
             if (!ili.FileSpecified)
                 return;
