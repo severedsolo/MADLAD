@@ -12,7 +12,6 @@ namespace MADLAD
         PopupDialog _uiDialog;
         private readonly Rect _geometry = new Rect(0.5f,0.5f,600,10);
 
-
         private void Start()
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -26,16 +25,17 @@ namespace MADLAD
         {
             string path = KSPUtil.ApplicationRootPath + "KSP.log";
             string newPath = path + "_backup";
+            if(File.Exists(newPath)) File.Delete(newPath);
             File.Copy(path, newPath);
+            ConfigNode[] whitelist = GameDatabase.Instance.GetConfigNode("MADLAD/MADLAD_WHITELIST").GetNodes("MOD");
             using (StreamReader reader = new StreamReader(newPath))
             {
                 string line = "None";
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (line.Contains("Exception loading"))
+                    if (ErrorToBeLogged(line) && !Whitelisted(line, whitelist))
                     {
                         _errors.Add(line);
-                        Debug.Log("[MADLAD]: Found an error at " + line);
                     }
                 }
             }
@@ -48,6 +48,43 @@ namespace MADLAD
             {
                 LogWriter.Instance.WriteLog(s);
             }
+        }
+
+        private bool Whitelisted(string line, ConfigNode[] whitelist)
+        {
+            Debug.Log("[MADLAD]: Found an error at "+line+" - checking whitelist");
+            if (whitelist == null || whitelist.Length == 0)
+            {
+                Debug.Log("[MADLAD]: Whitelist is empty");
+                return false;
+            }
+
+            for (int i = 0; i < whitelist.Length; i++)
+            {
+                ConfigNode cn = whitelist[i];
+                string modName = cn.GetValue("ModName");
+                string path = cn.GetValue("DependencyPath");
+                if (!line.Contains(modName)) continue;
+                Debug.Log("[MADLAD]: Found potential whitelist entry for "+modName);
+                if(File.Exists(Path.Combine(KSPUtil.ApplicationRootPath, "GameData/", path))) continue;
+                string log = "Matched " + modName + " to the whitelist. Suppressing error";
+                Debug.Log("[MADLAD]: "+log);
+                LogWriter.Instance.WriteLog(log);
+                return true;
+            }
+            Debug.Log("[MADLAD]: Could not verify that error is expected. Logging");
+            return false;
+        }
+
+        private bool ErrorToBeLogged(string line)
+        {
+            if (line.Contains("Exception loading")) return true;
+            if (line.Contains("AssemblyLoader: Assembly"))
+            {
+                if (line.Contains("is missing")) return false;
+                return true;
+            }
+            return false;
         }
 
         private PopupDialog GenerateDialog()

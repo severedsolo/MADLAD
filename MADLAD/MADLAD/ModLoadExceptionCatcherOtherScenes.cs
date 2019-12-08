@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MADLAD
 {
-    [KSPAddon(KSPAddon.Startup.SpaceCentre, true)]
+    [KSPAddon(KSPAddon.Startup.Instantly, true)]
     public class ModLoadExceptionCatcherOtherScenes : MonoBehaviour
     {
         PopupDialog _uiDialog;
