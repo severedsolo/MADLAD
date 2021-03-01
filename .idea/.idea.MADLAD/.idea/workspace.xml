@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ba1696fe-1543-4fc7-84d0-2e6e1a2c5f42" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MADLAD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADLAD/InstallValidator/Process.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MADLAD/InstallValidator/Process.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADLAD/MADLAD.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MADLAD/MADLAD.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADLAD/MADLAD/ModLoadExceptionCatcherOtherScenes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MADLAD/MADLAD/ModLoadExceptionCatcherOtherScenes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADLAD/MADLAD/ModLoaderExceptionCatcherMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MADLAD/MADLAD/ModLoaderExceptionCatcherMainMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,59 +13,59 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MADLAD" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/MADLAD/InstallValidator/IssueGui.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MADLAD/MADLAD/ModLoadExceptionCatcherOtherScenes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MADLAD/MADLAD/LogWriter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MADLAD/MADLAD/ModLoaderExceptionCatcherMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MADLAD/MADLAD/ModLoadExceptionCatcherOtherScenes.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MADLAD/InstallValidator/Process.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MADLAD/InstallValidator/InstallLocInfo.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/MADLAD/MADLAD/ModLoadExceptionCatcherOtherScenes.cs" />
-        <option value="$PROJECT_DIR$/MADLAD/MADLAD/ModLoaderExceptionCatcherMainMenu.cs" />
-      </list>
-    </option>
+    <setting file="file://$PROJECT_DIR$/MADLAD/InstallValidator/Process.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MADLAD/InstallValidator/IssueGui.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1UeUqjierUcyNAnytoRpdEZ5tkv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MADLAD.sln" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.steam/steam/steamapps/common/Kerbal Space Program/KSP_Data/Managed/UnityEngine.TextRenderingModule.dll" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.quicklists" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -84,11 +82,12 @@
       <workItem from="1575729342530" duration="395000" />
       <workItem from="1582109244036" duration="97000" />
       <workItem from="1582109389664" duration="631000" />
+      <workItem from="1614595064414" duration="99000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -97,19 +96,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="2383" y="433" width="424" height="479" key="FileChooserDialogImpl" timestamp="1582109336755">
-      <screen x="1920" y="312" width="1360" height="768" />
-    </state>
-    <state x="2383" y="433" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040/1920.312.1360.768@1920.312.1360.768" timestamp="1582109336755" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
